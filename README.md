@@ -1,3 +1,3 @@
 # Cloud-DevOps-Engineer-Nanodegree-Program
 
-Projects and concepts 
+Projects 1-4 and concepts
