@@ -6,7 +6,7 @@ Parameters:
     Type: String
   
   BucketName:
-    Description: Unique name of the S3 bucket where stores the files to deploy
+    Description: BucketName stores index.html
     Type: String
     Default: s3-bucket
 
