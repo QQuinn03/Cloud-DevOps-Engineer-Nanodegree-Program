@@ -1,0 +1,30 @@
+Description: >
+  Qiong Qin/project2 s3 bucket
+Parameters:
+  EnvironmentName:
+    Description: An environment name that will be prefixed to resource names
+    Type: String
+  
+  BucketName:
+    Description: Unique name of the S3 bucket where stores the files to deploy
+    Type: String
+    Default: s3-bucket
+
+Resources:
+
+  BucketS3:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+    DeletionPolicy: Delete
+
+Outputs: 
+  DataBucket:
+    Value: !Ref BucketS3
+    Export:
+      Name: !Sub ${EnvironmentName}-DataBucket
+
+  BucketARN:
+    Value: !Join ["", ["arn:aws:s3:::", !Ref "BucketS3", "/*"]]
+    Export:
+      Name: !Sub ${EnvironmentName}-BucketARN

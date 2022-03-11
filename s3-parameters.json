@@ -1,0 +1,11 @@
+[
+	{
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "UdacityProject2"
+    },
+	{
+		"ParameterKey": "BucketName",
+		"ParameterValue": "project2-s3bucket"
+    }
+
+]
