@@ -6,6 +6,11 @@ Parameters:
     Description: An environment name that will be prefixed to resource names
     Type: String
 
+  InstanceAMI:
+    Type: String
+    Default: ami-0747bdcabd34c712a
+    Description: EC2 AMI
+
 Resources:
   LBSecGroup:
     Type: AWS::EC2::SecurityGroup
@@ -153,7 +158,7 @@ Resources:
           aws s3 cp s3://project2-s3bucket/udacity.zip .
           unzip -o udacity.zip
           systemctl start apache2.service
-      ImageId: ami-0747bdcabd34c712a
+      ImageId: !Ref InstanceAMI
       IamInstanceProfile: !Ref WebServerInstanceProfile
       SecurityGroups:
         - Ref: WebServerSecGroup

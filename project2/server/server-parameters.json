@@ -2,5 +2,9 @@
 	{
 		"ParameterKey": "EnvironmentName",
 		"ParameterValue": "UdacityProject2"
-	}
+	},
+	{
+        "ParameterKey": "InstanceAMI",
+        "ParameterValue": "ami-0747bdcabd34c712a"
+    }
 ]
